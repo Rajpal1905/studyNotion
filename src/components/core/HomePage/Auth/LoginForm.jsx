@@ -71,7 +71,7 @@ export const LoginForm = () => {
             (<AiOutlineEye fontSize={24} fill='#AFB2BF' />) :
             (<AiOutlineEyeInvisible fontSize={24} fill='#AFB2BF' />)}
         </span>
-        <Link to="#">
+        <Link to="/forget-password">
           <p className='text-xs mt-1 text-blue-100 max-w-max ml-auto'>
             Forget Password
           </p>
