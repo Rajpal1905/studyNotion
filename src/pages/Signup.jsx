@@ -1,5 +1,5 @@
 import React from 'react'
-import { Templates } from '../../../../ReactIntermediate/react-router2/src/components/Templates'
+import { Templates } from '../components/core/HomePage/Auth/Templates'
 import signupImg from '../assets/Images/signup.webp'
 
 export const Signup = ({ formType}) => {

@@ -1,13 +1,12 @@
 
-const User = require("../models/user")  // User model to interact with the database
-const { mailSender } = require("../utility/emailSender")  // Utility to send emails
-const bcrypt = require("bcrypt")  // For hashing passwords
-const crypto = require("crypto")  // For generating secure random tokens
+const User = require("../models/user") 
+const { mailSender } = require("../utility/emailSender")  
+const bcrypt = require("bcrypt")  
+const crypto = require("crypto")  
 
-// Handler for generating and sending the reset password token
 exports.resetPasswordToken = async (req, res) => {
     try {
-        const { email } = req.body  // Extract the email from the request body
+        const { email } = req.body 
 
         // Check if email is provided in the request body
         if (!email) {
@@ -37,7 +36,7 @@ exports.resetPasswordToken = async (req, res) => {
 
         // Set up the email title and URL for the password reset link
         const emailTitle = "Password reset link"
-        const url = `http://localhost:3000/update-password/${token}`
+        const url = `http://localhost:5173/update-password/${token}`
 
         // Send the password reset email to the user
         await mailSender(email, emailTitle, `To reset your password, click the link below: ${url}`)

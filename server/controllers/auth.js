@@ -78,6 +78,7 @@ exports.signup = async (req, res) => {
             });
         }
 
+        console.log("bhuhbnjnnj", password , "jjjjj",confirmPassword)
         // Check if passwords match
         if (password !== confirmPassword) {
             return res.status(400).json({
