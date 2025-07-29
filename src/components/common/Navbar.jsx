@@ -24,7 +24,6 @@ export const Navbar = (props) => {
     try {
       const { data } = await apiConnector("GET", categories.CATEGORY_API);
 
-
       if (data?.allCatagorys) {
         // setSublinks(data.allCatagorys.map(cat => cat.name)); 
         setSublinks(data.allCatagorys);
@@ -53,7 +52,6 @@ export const Navbar = (props) => {
       <div className='flex justify-between w-11/12 gap-8 items-center mx-auto max-w-[1160px] py-4 '>
         <Link to='/'>
           <img src={logo} alt='Logo' width={160} height={32} loading='lazy' />
-
         </Link>
         <nav>
           <ul className=' flex gap-x-6 text-white '>
@@ -65,7 +63,6 @@ export const Navbar = (props) => {
                       <>
                         <div
                           className={`group relative flex cursor-pointer items-center gap-1 ${matchRoute("/catalog/:catalogName") ? " text-yellow-25" : "text-richblack-25 "}
-            
                       }`}>
                           <p>{link.title}</p>
                           <BsChevronDown />
@@ -89,10 +86,6 @@ export const Navbar = (props) => {
                             ) : (
                               <p className="text-center">No Courses Found</p>
                             )}
-
-
-
-
                           </div>
                         </div>
                       </>
