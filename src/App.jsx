@@ -8,6 +8,8 @@ import { OpenRoute } from './components/core/Auth/OpenRoute'
 import { ForgotPassword } from './pages/ForgotPassword'
 import { UpdatePassword } from './pages/UpdatePassword'
 import { VerifyEmail } from './pages/VerifyEmail'
+import {About} from "./pages/About"
+
 
 function App() {
   return (
@@ -33,6 +35,14 @@ function App() {
           element={
             <OpenRoute>
               <Signup formType={'signup'} />
+            </OpenRoute>
+          }
+        />
+        <Route
+          path='about'
+          element={
+            <OpenRoute>
+              <About/>
             </OpenRoute>
           }
         />
